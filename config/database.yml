@@ -15,9 +15,9 @@
 # gem 'pg'
 #
 default: &default
-  host: <%= ENV['RIGHTCHOICE_HOST'] %>
+  host: <%= ENV.fetch('RIGHTCHOICE_HOST') %>
   username: app
-  password: <%= ENV['RIGHTCHOICE_DATABASE_PASSWORD'] %>
+  password: <%= ENV.fetch('RIGHTCHOICE_DATABASE_PASSWORD') %>
   adapter: postgresql
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
